@@ -21,8 +21,8 @@ class test_ProjectEulerProblem23(unittest.TestCase):
 	def abundantNumberCheck(self, x):
 		return self.sumOfProperDivisors(x) > x
 	def mainDriver(self):
-		maxSpan = 29000 # 5*10**4 # 14063
-		listOfAllowedPositiveInts = [k for k in range(2*maxSpan+1)]
+		maxSpan = 32000 # 29000 # 5*10**4 # 14063
+		listOfAllowedPositiveInts = [k for k in range(math.ceil(2.5*maxSpan)+1)]
 		abundantNumberList = []
 		print("-"*40)
 		for x in range(1, maxSpan+1):
@@ -46,11 +46,11 @@ class test_ProjectEulerProblem23(unittest.TestCase):
 				actualMaxSpan = sumKM
 				listOfAllowedPositiveInts[sumKM] = 0
 		print("-"*40)
-		for k in range(1, 28125):
+		for k in range(1, maxSpan+1):
 			if listOfAllowedPositiveInts[k] != 0:
 				print("-->", listOfAllowedPositiveInts[k])
 		print("-"*40)
-		return sum(listOfAllowedPositiveInts[24:28125])
+		return sum(listOfAllowedPositiveInts[24:maxSpan+1]) + 
 	def test_DefaultTest1(self):
 		self.assertTrue(True)
 	def test_DefaultTest2(self):

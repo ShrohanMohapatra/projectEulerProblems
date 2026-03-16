@@ -3,6 +3,8 @@
 import unittest
 import pprint
 
+# f(90) = 2880067194446832666
+
 class test_ProjectEulerProblem494(unittest.TestCase):
 	def collatzNextStep(self, x):
 		if x%2:
@@ -41,7 +43,7 @@ class test_ProjectEulerProblem494(unittest.TestCase):
 		return flagVerif
 	def distinctPrefixFamilySetList(self, listOfNumbers):
 		maxSpan = 3*10**8
-		# 10**8 # 5*10**7 # 3*10**7 # 10**7
+		# 10**20 # 10**8 # 5*10**7 # 3*10**7 # 10**7
 		# 75*10**5 # 10**5 # 5*10**5 # 10**6 # 5*10**6
 		dictPrefixFamily = {}
 		for number in listOfNumbers:
